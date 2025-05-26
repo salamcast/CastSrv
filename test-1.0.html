@@ -1,0 +1,37 @@
+<!DOCTYPE HTML><html>
+ <head>
+  <title>FeedMe - RSS Parser - pretty print only</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Language" content="en-us" />
+  <!-- Need jQuery to run Javascript class -->
+  <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+
+  <!-- Javascript RSS Parser class -->
+  <script type="text/javascript" src="js/feedme-2.0.js"></script>
+  <!-- DEBUG RSS parsed js object output -->
+  <script type="text/javascript" src="js/prettyprint.js"></script>
+  <script type="text/javascript" >
+jQuery(function ($) {
+   var feeds = [];
+   $('link[type="application/rss+xml"]').each(function() {
+    var link = $(this).attr('href');
+//    var f = feedMe(link,'base');
+//    $('#body').append("<hr />"+f+"<br />");
+//    feeds.push(f);
+
+    f = feedMe(link);
+    $('#body').append('<h1>Channel '+link+'</h1>');
+    $('#body').append(prettyPrint(f));
+
+    $('#body').append("<hr />");
+   });
+
+});
+  </script>
+  <link title="NASA ScienceCasts" href="test.nasa.sci.rss" type="application/rss+xml" rel="alternate">
+  <link title="NASACast Video" href="test.nasa.video.rss" type="application/rss+xml" rel="alternate">
+ </head>
+ <body>
+<div id="body"></div>
+</body>
+</html>

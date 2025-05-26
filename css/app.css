@@ -1,0 +1,48 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+#chan_info {
+    min-height: 10px;
+    max-height: 800px;
+    min-width: 10px;
+    max-width: 33%;
+    overflow-y: auto;
+}
+#chan_info img {
+    min-height: 10px;
+    max-height: 280px;
+    min-width: 10px;
+    max-width: 280px;
+}
+#play_info {
+
+    min-width: 10px;
+    max-width: 66%;
+
+    overflow-y: auto;
+}
+#playlist {
+    min-width: 10px;
+    max-width: 700px;
+
+    min-height: 10px;
+    max-height: 700px;
+    overflow-y: auto;
+}
+#podcast {
+    min-height: 10px;
+    max-height: 700px;
+    min-width: 10px;
+    max-width: 350px;
+    overflow-y: auto;
+}
+
+#debug {
+    min-height: 10px;
+    max-height: 700px;
+    min-width: 10px;
+    max-width: 700px;
+    overflow-y: auto;
+}
